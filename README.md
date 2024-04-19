@@ -1,6 +1,6 @@
 # WASM-crypto-algorithms
 
-This repository is an adaptation of the crypto-algorithms repository for compiling it to WASM and MUSL.
+This repository is an adaptation of the crypto-algorithms repository for compiling it to WASM.
 
 # Setup:
 
