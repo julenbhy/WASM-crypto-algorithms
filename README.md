@@ -2,7 +2,7 @@
 
 This repository is an adaptation of the crypto-algorithms repository for compiling it to WASM and MUSL.
 
-# Setup
+# Setup:
 
 wasi-sdk 21
 
@@ -10,13 +10,13 @@ wasi-sdk 21
 
 
 
-# Building
+# Building:
     
 If the required software is not installed where indicated above, modify the paths in ```compile.sh```.
 
 
 
-### Building with MUSL
+### Building with MUSL:
 Since WASI is based on MUSL, it's appropriate to compare it with MUSL as well.
 
 To compile with MUSL:
