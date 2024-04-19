@@ -1,6 +1,6 @@
 # WASM-crypto-algorithms
 
-This repository is an adaptation of the crypto-algorithms repository for compiling it to WebAssembly.
+This repo takes the [crypto-algorithms](https://github.com/B-Con/crypto-algorithms) code collection and tweaks it for easy WebAssembly compilation using CMake.
 
 # Setup:
 
