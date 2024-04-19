@@ -18,7 +18,7 @@ wasi-sdk 21
 
 
 
-### Building with MUSL:
+## Building with MUSL:
 Since WASI is based on MUSL, it's appropriate to compare it with MUSL as well.
 
 To compile with MUSL:
