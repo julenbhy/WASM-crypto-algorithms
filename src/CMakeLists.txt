@@ -4,6 +4,7 @@ cmake_minimum_required(VERSION 3.0)
 # Configure CMake for compiling to wasm
 if(COMPILE_TO_WASM)
   message(STATUS "Compiling to wasm")
+  set(WASI_SDK_PREFIX "${WASI_SDK_PATH}")
   set(CMAKE_TOOLCHAIN_FILE "${WASI_SDK_PATH}/share/cmake/wasi-sdk.cmake")
 endif()
 
@@ -38,6 +39,7 @@ endif()
 
 
 add_executable(aes_test aes_test.c aes.c)
+target_compile_options(aes_test PRIVATE -Wno-implicit-function-declaration)
 add_executable(arcfour_test arcfour_test.c arcfour.c)
 add_executable(base64_test base64_test.c base64.c)
 add_executable(blowfish_test blowfish_test.c blowfish.c)
