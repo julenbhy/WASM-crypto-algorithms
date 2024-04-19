@@ -12,7 +12,9 @@ wasi-sdk 21
 
 # Building:
     
-If the required software is not installed where indicated above, modify the paths in ```compile.sh```.
+1: If the required software is not installed where indicated above, modify the paths in ```compile.sh```.
+
+2: Run ```compile.sh```
 
 
 
@@ -26,3 +28,5 @@ To compile with MUSL:
     curl -sL https://musl.cc/x86_64-linux-musl-cross.tgz | sudo tar -xz -C /opt/
 
 2: Uncomment the lines related to musl in ```compile.sh```.
+
+3: : Run ```compile.sh```
