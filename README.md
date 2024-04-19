@@ -1,17 +1,20 @@
-crypto-algorithms
-=================
+# WASM-crypto-algorithms
+
+This repository is an adaptation of the crypto-algorithms repository for compiling it to WASM and MUSL.
+
+# Setup
+
+wasi-sdk 21
+
+    curl -sL https://github.com/WebAssembly/wasi-sdk/releases/download/wasi-sdk-21/wasi-sdk-21.0-linux.tar.gz | sudo tar -xz -C /opt/
+
+musl-cross
+
+    curl -sL https://musl.cc/x86_64-linux-musl-cross.tgz | sudo tar -xz -C /opt/
 
 
-About
----
-These are basic implementations of standard cryptography algorithms, written by Brad Conte (brad@bradconte.com) from scratch and without any cross-licensing. They exist to provide publically accessible, restriction-free implementations of popular cryptographic algorithms, like AES and SHA-1. These are primarily intended for educational and pragmatic purposes (such as comparing a specification to actual implementation code, or for building an internal application that computes test vectors for a product). The algorithms have been tested against standard test vectors.
+# Building
+    
+If the required software is not installed where indicated above, modify the paths in ```compile.sh```.
 
-This code is released into the public domain free of any restrictions. The author requests acknowledgement if the code is used, but does not require it. This code is provided free of any liability and without any quality claims by the author.
-
-Note that these are *not* cryptographically secure implementations. They have no resistence to side-channel attacks and should not be used in contexts that need cryptographically secure implementations.
-
-These algorithms are not optimized for speed or space. They are primarily designed to be easy to read, although some basic optimization techniques have been employed.
-
-Building
----
-The source code for each algorithm will come in a pair of a source code file and a header file. There should be no inter-header file dependencies, no additional libraries, no platform-specific header files, or any other complicating matters. Compiling them should be as easy as adding the relevent source code to the project.
+Comment out the lines related to musl in ```compile.sh``` if you do not wish to execute them.
